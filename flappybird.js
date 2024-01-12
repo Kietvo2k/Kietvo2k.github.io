@@ -18,7 +18,7 @@
     var isGameOver = false;
 
     var bird = {
-        x: backgroundImg.width / 5 + 200,
+        x: backgroundImg.width / 5 + 300,
         y: backgroundImg.height / 2,
         width: 50, 
         height: 36, 
