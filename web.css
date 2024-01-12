@@ -1,0 +1,80 @@
+.corner-buttons {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.corner-buttons button {
+    margin-bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.corner-buttons button:hover {
+    background-color: #45a049;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #aeeaff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.orange-text {
+    color: orange;
+}
+
+.game-box {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-box:hover {
+    transform: scale(1.1);
+}
+
+.game-box img {
+    width: 100px; /* Điều chỉnh kích thước hình ảnh */
+}
+
+.game-box p {
+    margin: 10px 0;
+}
+
+.top-right-buttons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row; /* Xếp theo hàng ngang */
+}
+
+.top-right-buttons button {
+    margin-right: 10px; /* Khoảng cách giữa các nút */
+    padding: 10px; /* Tăng kích thước của nút */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.top-right-buttons button:hover {
+    background-color: #45a049;
+}
+

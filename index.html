@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDZ Game Hay</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <div class="container">
+         <div class="top-right-buttons">
+            <button onclick="redirectToPage1()">Đăng nhập</button>
+            <button onclick="redirectToPage2()">Đăng kí</button>
+        </div>
+
+        <h1 class="orange-text">KDZ Game Hay</h1>
+        <div class="user-info" id="user-info">
+        </div>
+        <div class="game-box" id="flappyBird" onclick="redirectToGame()">
+            <img src="flappybird.png" alt="Flappy Bird">
+            <p>Game Flappy Bird</p>
+        </div>
+        <div class="game-box" id="chessGame" onclick="redirectToChess()">
+            <img src="chess.png" alt="Game Cờ Vua">
+            <p>Game Cờ Vua</p>
+        </div>
+    </div>
+    <script src="web.js"></script>
+</body>
+</html>
