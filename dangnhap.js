@@ -1,29 +1,33 @@
         document.addEventListener("DOMContentLoaded", function() {
             updateUserInfo();
         })
-        function showForgotPasswordForm() {
-            document.getElementById("loginForm").style.display = "none";
-            document.getElementById("registerForm").style.display = "none";
-            document.getElementById("forgotPasswordForm").style.display = "block";
+    function showForgotPasswordForm() {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("registerForm").style.display = "none";
+        document.getElementById("forgotPasswordForm").style.display = "block";
         }
     
     function login() {
-    let gmail = document.getElementById("loginGmail").value;
-    let password = document.getElementById("loginPassword").value;
-    
-    let savedPassword = localStorage.getItem(gmail);
-    
-    if (savedPassword && savedPassword === password) {
-    alert("Đăng nhập thành công");
-    
-    localStorage.setItem("loggedInUser", gmail);
-    
-    window.location.href = "index.html";
-    return false; 
-    } else {
-    document.getElementById("loginMessage").innerText = "Sai mật khẩu hoặc gmail";
-    return false; 
-    }
+        let gmail = document.getElementById("loginGmail").value;
+        let password = document.getElementById("loginPassword").value;
+        
+        let savedPassword = localStorage.getItem(gmail);
+        
+        if (savedPassword && savedPassword === password) {
+        alert("Đăng nhập thành công");
+        
+        localStorage.setItem("loggedInUser", gmail);
+        
+        window.location.href = "index.html";
+        return false; 
+        } else {
+        document.getElementById("loginMessage").innerText = "Sai mật khẩu hoặc gmail";
+        return false; 
+        }
+        }
+
+    function signin() {
+        window.location.href = "Dangki.html";
     }
     
     function resetPassword() {

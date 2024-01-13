@@ -8,22 +8,49 @@
 </head>
 <body>
     <div class="container">
-         <div class="top-right-buttons">
+
+        <div class="top-right-buttons">
             <button onclick="redirectToPage1()">Đăng nhập</button>
             <button onclick="redirectToPage2()">Đăng kí</button>
+        </div>
+
+        <div class="game-chinh">
+            <div class="game-box" id="flappyBird" onclick="redirectToGame1()">
+                <img src="flappybird.png" alt="Flappy Bird">
+                <p>Game Flappy Bird</p>
+            </div>
+            <div class="game-box" id="chessGame" onclick="redirectToGame2()">
+                <img src="chessai.png" alt="Game Cờ Vua AI">
+                <p>Game Cờ Vua AI</p>
+            </div>
+        </div>
+
+        <div class="game-row">
+            <div class="game-box" id="game3" onclick="redirectToGame3()">
+                <img src="chess2.png" alt="Game Cờ vua 2 người">
+                <p>Cờ vua 2 người</p>
+            </div>
+            <div class="game-box" id="game4" onclick="redirectToGame4()">
+                <img src="xoai.png" alt="Game Cờ caro ( X / O ) AI">
+                <p>Cờ caro ( X / O ) AI</p>
+            </div>
+        </div>
+
+        <div class="game-row">
+            <div class="game-box" id="game5" onclick="redirectToGame5()">
+                <img src="xo2.png" alt="Game Cờ caro ( X / O ) 2 người">
+                <p>Cờ caro ( X / O ) 2 người</p>
+            </div>
+            <div class="game-box" id="game6" onclick="redirectToGame6()">
+                <img src="ransanmoi.png" alt="Game Rắn săn mồi">
+                <p>Rắn săn mồi</p>
+            </div>
         </div>
 
         <h1 class="orange-text">KDZ Game Hay</h1>
         <div class="user-info" id="user-info">
         </div>
-        <div class="game-box" id="flappyBird" onclick="redirectToGame()">
-            <img src="flappybird.png" alt="Flappy Bird">
-            <p>Game Flappy Bird</p>
-        </div>
-        <div class="game-box" id="chessGame" onclick="redirectToChess()">
-            <img src="chess.png" alt="Game Cờ Vua">
-            <p>Game Cờ Vua</p>
-        </div>
+
     </div>
     <script src="web.js"></script>
 </body>

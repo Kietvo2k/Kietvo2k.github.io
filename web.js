@@ -23,22 +23,22 @@ function isValidGmail(email) {
   return email.endsWith("@gmail.com") && !email.includes("x") && email !== "xxxxx@gmail.com";
 }
 
-function redirectToGame() {
+function redirectToGame1() {
   var loggedInUser = localStorage.getItem("loggedInUser");
   if (isLoggedIn(loggedInUser)) {
-      window.location.href = "gameflappybird.html";
+      window.location.href = "flappybird.html";
   } else {
-      alert("Vui lòng đăng nhập để chơi Flappy Bird.");
+      alert("Vui lòng đăng nhập để chơi game Flappy Bird.");
       redirectToLoginPage();
   }
 }
 
-function redirectToChess() {
+function redirectToGame2() {
   var loggedInUser = localStorage.getItem("loggedInUser");
   if (isLoggedIn(loggedInUser)) {
-      window.location.href = "chess.html";
+      window.location.href = "chessai.html";
   } else {
-      alert("Vui lòng đăng nhập để chơi Chess.");
+      alert("Vui lòng đăng nhập để chơi game cờ vua AI.");
       redirectToLoginPage();
   }
 }
@@ -53,4 +53,44 @@ function redirectToPage1() {
 
 function redirectToPage2() {
   window.location.href = "dangki.html";
+}
+
+function redirectToGame3() {
+  var loggedInUser = localStorage.getItem("loggedInUser");
+  if (isLoggedIn(loggedInUser)) {
+      window.location.href = "chess.html";
+  } else {
+      alert("Vui lòng đăng nhập để chơi Game cờ vua 2 người.");
+      redirectToLoginPage();
+  }
+}
+
+function redirectToGame4() {
+  var loggedInUser = localStorage.getItem("loggedInUser");
+  if (isLoggedIn(loggedInUser)) {
+      window.location.href = "tictactoeai.html";
+  } else {
+      alert("Vui lòng đăng nhập để chơi Game X/O AI.");
+      redirectToLoginPage();
+  }
+}
+
+function redirectToGame5() {
+  var loggedInUser = localStorage.getItem("loggedInUser");
+  if (isLoggedIn(loggedInUser)) {
+      window.location.href = "tictactoe.html";
+  } else {
+      alert("Vui lòng đăng nhập để chơi Game X/O 2 người.");
+      redirectToLoginPage();
+  }
+}
+
+function redirectToGame6() {
+  var loggedInUser = localStorage.getItem("loggedInUser");
+  if (isLoggedIn(loggedInUser)) {
+      window.location.href = "ransanmoi.html";
+  } else {
+      alert("Vui lòng đăng nhập để chơi Game rắn săn mồi.");
+      redirectToLoginPage();
+  }
 }
