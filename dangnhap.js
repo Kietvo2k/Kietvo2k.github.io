@@ -27,7 +27,7 @@
         }
 
     function signin() {
-        window.location.href = "Dangki.html";
+        window.location.href = "dangki.html";
     }
     
     function resetPassword() {
