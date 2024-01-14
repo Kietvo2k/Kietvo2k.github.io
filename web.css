@@ -1,17 +1,16 @@
-
 .corner-buttons {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 2vw; /* thay đổi top để phản ánh về viewport width */
+    left: 2vw; /* thay đổi left để phản ánh về viewport width */
     display: flex;
     flex-direction: column;
 }
 
 .corner-buttons button {
-    margin-bottom: 10px;
+    margin-bottom: 2vw; /* thay đổi margin để phản ánh về viewport width */
     background-color: #4CAF50;
     color: white;
-    padding: 5px;
+    padding: 1vw; /* thay đổi padding để phản ánh về viewport width */
     border: none;
     cursor: pointer;
 }
@@ -35,32 +34,32 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
-    margin-top: 40px; 
+    margin-top: 4vh; /* thay đổi margin để phản ánh về viewport height */
 }
 
 .orange-text {
     color: orange;
-    margin-top: 20px;
+    margin-top: 2vh; /* thay đổi margin để phản ánh về viewport height */
 }
 
 .user-info {
     color: rgb(195, 0, 255);
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin-top: 2vh; /* thay đổi margin để phản ánh về viewport height */
+    margin-bottom: 5vh; /* thay đổi margin để phản ánh về viewport height */
 }
 
 .top-right-buttons {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 2vw; /* thay đổi top để phản ánh về viewport width */
+    right: 2vw; /* thay đổi right để phản ánh về viewport width */
     display: flex;
     flex-direction: row;
     z-index: 2;
 }
 
 .top-right-buttons button {
-    margin-right: 10px;
-    padding: 10px;
+    margin-right: 2vw; /* thay đổi margin để phản ánh về viewport width */
+    padding: 1vw; /* thay đổi padding để phản ánh về viewport width */
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -75,7 +74,7 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 400px; 
+    margin-top: 40vh; /* thay đổi margin để phản ánh về viewport height */
     margin-bottom: 0px;
 }
 
@@ -83,17 +82,17 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 10px; 
+    margin-top: 1vh; /* thay đổi margin để phản ánh về viewport height */
     margin-bottom: 0px;
 }
 
 .game-box {
     background-color: #fff;
-    padding: 20px;
-    margin: 10px;
+    padding: 1vw; /* thay đổi padding để phản ánh về viewport width */
+    margin: 0.5vw; /* thay đổi margin để phản ánh về viewport width */
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-    max-width: 200px;
+    max-width: 10vw; /* thay đổi max-width để phản ánh về viewport width */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -106,9 +105,109 @@ body {
 }
 
 .game-box img {
+    width: 50%;
+    height: 50%;
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: contain;
+}
+
+.top-left-corner {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+#updateButton {
+    background-color: #808080;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#updateButton:hover {
+    background-color: #555;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Tùy chỉnh theo kích thước mong muốn */
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #555;
+}
+
+h2 {
+    color: #18fd23;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #08ca70;
+}
+
+hr {
+    border: 0.5px solid #130b79;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.fade {
+    animation: fade 0.3s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
 }

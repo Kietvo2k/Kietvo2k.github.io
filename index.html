@@ -9,6 +9,10 @@
 <body>
     <div class="container">
 
+        <div class="top-left-corner">
+            <button id="updateButton" onclick="openUpdatePopup()">Kiểm tra cập nhật 2.2</button>
+        </div>
+
         <div class="top-right-buttons">
             <button onclick="redirectToPage1()">Đăng nhập</button>
             <button onclick="redirectToPage2()">Đăng kí</button>
@@ -39,7 +43,7 @@
         <div class="game-row">
             <div class="game-box" id="game5" onclick="redirectToGame5()">
                 <img src="xo2.png" alt="Game Cờ caro ( X / O ) 2 người">
-                <p>Cờ caro ( X / O ) 2 người</p>
+                <p>Cờ caro 2 người</p>
             </div>
             <div class="game-box" id="game6" onclick="redirectToGame6()">
                 <img src="ransanmoi.png" alt="Game Rắn săn mồi">
@@ -49,6 +53,23 @@
 
         <h1 class="orange-text">KDZ Game Hay</h1>
         <div class="user-info" id="user-info">
+        </div>
+
+        <div id="updateModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeUpdatePopup()">&times;</span>
+                <h2>Cập nhật 2.2</h2>
+                <hr>
+                <ul>
+                    <li>Nâng cấp giao diện mới</li>
+                    <li>Fix lag, fix lỗi cho website</li>
+                    <li>Sửa đổi một số hàm</li>
+                    <li>Thay đổi giao diện game rắn săn mồi</li>
+                    <li>Sửa đổi giao diện website trên điện thoại</li>
+                </ul>
+                <hr>
+                <p>Cảm ơn đã trải nghiệm trang web.</p>
+            </div>
         </div>
 
     </div>

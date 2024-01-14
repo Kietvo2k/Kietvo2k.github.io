@@ -94,3 +94,27 @@ function redirectToGame6() {
       redirectToLoginPage();
   }
 }
+
+var modal = document.getElementById("updateModal");
+
+var updateButton = document.getElementById("updateButton");
+
+var closeBtn = document.getElementsByClassName("close")[0];
+
+updateButton.onclick = function() {
+    modal.style.display = "block";
+}
+
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+function closeUpdatePopup() {
+    modal.style.display = "none";
+}
