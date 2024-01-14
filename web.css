@@ -88,11 +88,11 @@ body {
 
 .game-box {
     background-color: #fff;
-    padding: 1vw; /* thay đổi padding để phản ánh về viewport width */
-    margin: 0.5vw; /* thay đổi margin để phản ánh về viewport width */
+    padding: 2vw; /* thay đổi padding để phản ánh về viewport width */
+    margin: 0.5w; /* thay đổi margin để phản ánh về viewport width */
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-    max-width: 10vw; /* thay đổi max-width để phản ánh về viewport width */
+    max-width: 15vw; /* thay đổi max-width để phản ánh về viewport width */
     text-align: center;
     display: flex;
     flex-direction: column;
