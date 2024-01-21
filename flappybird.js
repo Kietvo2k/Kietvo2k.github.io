@@ -12,7 +12,7 @@
     pipeTopImg.src = "ongtren.png";
     pipeBottomImg.src = "ongduoi.png";
 
-    var score = 0;
+    var score = 1;
     var pipeGap = 140;
     var pipeDistance;
     var isGameOver = false;
@@ -23,8 +23,8 @@
         width: 50, 
         height: 36, 
         velocity: 0,
-        gravity: 0.4,
-        jump: 8
+        gravity: 0.3,
+        jump: 6
     };
 
     var pipes = [];

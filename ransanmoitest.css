@@ -14,7 +14,7 @@ body {
   background: #E3F2FD;
 }
 .wrapper {
-  width: 45vmin;
+  width: 75vmin;
   height: 55vmin;
   display: flex;
   overflow: hidden;

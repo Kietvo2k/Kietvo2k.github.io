@@ -95,6 +95,16 @@ function redirectToGame6() {
   }
 }
 
+function redirectToGame7() {
+  var loggedInUser = localStorage.getItem("loggedInUser");
+  if (isLoggedIn(loggedInUser)) {
+      window.location.href = "Phatnhac.html";
+  } else {
+      alert("Vui lòng đăng nhập để chơi Nghe nhạc.");
+      redirectToLoginPage();
+  }
+}
+
 var modal = document.getElementById("updateModal");
 
 var updateButton = document.getElementById("updateButton");

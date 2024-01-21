@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KDZ Game Hay</title>
-    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="testwebgpt.css">
 </head>
 <body>
     <div class="container">
 
-        <h1 class="orange-text">KDZ Game Hay</h1>
-        <div class="user-info" id="user-info">
-        </div>
-
         <div class="top-left-corner">
-            <button id="updateButton" onclick="openUpdatePopup()">Cập nhật 3.0</button>
+            <button id="updateButton" onclick="openUpdatePopup()">Kiểm tra cập nhật 2.2</button>
         </div>
 
         <div class="top-right-buttons">
@@ -22,7 +18,7 @@
             <button onclick="redirectToPage2()">Đăng kí</button>
         </div>
 
-        <div class="game-row">
+        <div class="game-chinh">
             <div class="game-box" id="flappyBird" onclick="redirectToGame1()">
                 <img src="flappybird.png" alt="Flappy Bird">
                 <p>Game Flappy Bird</p>
@@ -55,11 +51,8 @@
             </div>
         </div>
 
-        <div class="nghe-nhac">
-            <div class="game-chinh" id="game7" onclick="redirectToGame7()">
-                <img src="Phatnhac.png" alt="Nghe nhạc">
-                <p>Trang web nghe nhạc</p>
-            </div>
+        <h1 class="orange-text">KDZ Game Hay</h1>
+        <div class="user-info" id="user-info">
         </div>
 
         <div id="updateModal" class="modal">
@@ -68,17 +61,24 @@
                 <h2>Cập nhật 2.2</h2>
                 <hr>
                 <ul>
-                    <li>Sửa trò rắn săn mồi</li>
-                    <li>Thêm trang nghe nhạc made by Kiệt</li>
-                    <li>Thêm trang nhạc</li>
-                    <li>Thêm 3 nhạc trang nhạc</li>
+                    <li>Nâng cấp giao diện mới</li>
+                    <li>Fix lag, fix lỗi cho website</li>
+                    <li>Sửa đổi một số hàm</li>
+                    <li>Thay đổi giao diện game rắn săn mồi</li>
+                    <li>Sửa đổi giao diện website trên điện thoại</li>
                 </ul>
                 <hr>
                 <p>Cảm ơn đã trải nghiệm trang web.</p>
             </div>
         </div>
 
+        <div id="updateNotification" class="update-notification">
+            <span id="countdown"></span>
+            <p>Cập nhật 2.2 sẽ diễn ra sau:</p>
+        </div>
+
+
     </div>
-    <script src="web.js"></script>
+    <script src="testwebgpt.js"></script>
 </body>
 </html>

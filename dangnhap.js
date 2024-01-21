@@ -1,30 +1,38 @@
-        document.addEventListener("DOMContentLoaded", function() {
-            updateUserInfo();
-        })
-    function showForgotPasswordForm() {
-        document.getElementById("loginForm").style.display = "none";
-        document.getElementById("registerForm").style.display = "none";
-        document.getElementById("forgotPasswordForm").style.display = "block";
-        }
-    
+    document.addEventListener("DOMContentLoaded", function () {
+        updateUserInfo();
+    });
+
+    function updateUserInfo() {
+        // Thêm tài khoản admin khi trang được tải
+        const adminEmail = "Kietadmin@gmail.com";
+        const adminPassword = "Kietadmin2009";
+        localStorage.setItem(adminEmail, adminPassword);
+    }
+
+    // Cập nhật hàm login để kiểm tra tài khoản admin
     function login() {
         let gmail = document.getElementById("loginGmail").value;
         let password = document.getElementById("loginPassword").value;
-        
+
+        if (gmail === "Kietadmin@gmail.com" && password === "Kietadmin2009") {
+            alert("Đăng nhập thành công với tài khoản admin");
+            // Chuyển hướng sang trang admin.html
+            window.location.href = "admin.html";
+            return false;
+        }
+
         let savedPassword = localStorage.getItem(gmail);
-        
+
         if (savedPassword && savedPassword === password) {
-        alert("Đăng nhập thành công");
-        
-        localStorage.setItem("loggedInUser", gmail);
-        
-        window.location.href = "index.html";
-        return false; 
+            alert("Đăng nhập thành công");
+            localStorage.setItem("loggedInUser", gmail);
+            window.location.href = "index.html";
+            return false;
         } else {
-        document.getElementById("loginMessage").innerText = "Sai mật khẩu hoặc gmail";
-        return false; 
+            document.getElementById("loginMessage").innerText = "Sai mật khẩu hoặc gmail";
+            return false;
         }
-        }
+    }
 
     function signin() {
         window.location.href = "dangki.html";

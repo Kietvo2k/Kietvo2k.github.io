@@ -1,7 +1,7 @@
 .corner-buttons {
     position: fixed;
     top: 2vw; /* thay đổi top để phản ánh về viewport width */
-    left: 2vw; /* thay đổi left để phản ánh về viewport width */
+    left: 2vw; 
     display: flex;
     flex-direction: column;
 }
@@ -39,7 +39,7 @@ body {
 
 .orange-text {
     color: orange;
-    margin-top: 2vh; /* thay đổi margin để phản ánh về viewport height */
+    margin-top: 180vh; /* thay đổi margin để phản ánh về viewport height */
 }
 
 .user-info {
@@ -70,19 +70,41 @@ body {
     background-color: #45a049;
 }
 
-.game-chinh {
+.nghe-nhac {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 40vh; /* thay đổi margin để phản ánh về viewport height */
-    margin-bottom: 0px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+    margin-bottom: 30vh;
+    max-width: 40vw; /* Thay đổi giá trị này tùy thuộc vào nhu cầu của bạn */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    overflow: hidden;
+  }
+
+.nghe-nhac img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /*Thêm đường cong cho ảnh */
+}
+
+.nghe-nhac p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ff00f2;
+    background-color: #fff;
+    padding: 3vw; /* thay đổi padding để phản ánh về viewport width */
+    margin: 1w; /* thay đổi margin để phản ánh về viewport width */
 }
 
 .game-row {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 1vh; /* thay đổi margin để phản ánh về viewport height */
+    margin-top: 2vh; /* thay đổi margin để phản ánh về viewport height */
     margin-bottom: 0px;
 }
 
@@ -150,6 +172,10 @@ body {
     border-radius: 10px;
 }
 
+.modal-content p {
+    color: red;
+}
+
 .close {
     color: #aaa;
     float: right;
@@ -177,7 +203,7 @@ ul li {
     line-height: 1.6;
     margin-bottom: 10px;
     font-size: 16px;
-    color: #08ca70;
+    color: #2508ca;
 }
 
 hr {
