@@ -3,82 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KDZ Game Hay</title>
-    <link rel="stylesheet" href="web.css">
+    <title>Trang web cập nhật</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        #countdown {
+            font-size: 2em;
+            font-weight: bold;
+            color: #e44d26;
+            margin: 0;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
 
-        <h1 class="orange-text">KDZ Game Hay</h1>
-        <div class="user-info" id="user-info">
-        </div>
+    <h1>Trang web đang cập nhật và sửa chữa máy chủ</h1>
+    <h1>Máy chủ hiện tại đang bị lỗi</h1>
+    <p id="countdown">Còn lại 12 ngày</p>
 
-        <div class="top-left-corner">
-            <button id="updateButton" onclick="openUpdatePopup()">Cập nhật 3.0</button>
-        </div>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date();
+        countDownDate.setDate(countDownDate.getDate() + 12); // 12 ngày từ ngày hiện tại
 
-        <div class="top-right-buttons">
-            <button onclick="redirectToPage1()">Đăng nhập</button>
-            <button onclick="redirectToPage2()">Đăng kí</button>
-        </div>
+        // Update the countdown every 1 second
+        var x = setInterval(function() {
 
-        <div class="game-row">
-            <div class="game-box" id="flappyBird" onclick="redirectToGame1()">
-                <img src="flappybird.png" alt="Flappy Bird">
-                <p>Game Flappy Bird</p>
-            </div>
-            <div class="game-box" id="chessGame" onclick="redirectToGame2()">
-                <img src="chessai.png" alt="Game Cờ Vua AI">
-                <p>Game Cờ Vua AI</p>
-            </div>
-        </div>
+            // Get the current date and time
+            var now = new Date().getTime();
 
-        <div class="game-row">
-            <div class="game-box" id="game3" onclick="redirectToGame3()">
-                <img src="chess2.png" alt="Game Cờ vua 2 người">
-                <p>Cờ vua 2 người</p>
-            </div>
-            <div class="game-box" id="game4" onclick="redirectToGame4()">
-                <img src="xoai.png" alt="Game Cờ caro ( X / O ) AI">
-                <p>Cờ caro ( X / O ) AI</p>
-            </div>
-        </div>
+            // Calculate the remaining time
+            var distance = countDownDate - now;
 
-        <div class="game-row">
-            <div class="game-box" id="game5" onclick="redirectToGame5()">
-                <img src="xo2.png" alt="Game Cờ caro ( X / O ) 2 người">
-                <p>Cờ caro 2 người</p>
-            </div>
-            <div class="game-box" id="game6" onclick="redirectToGame6()">
-                <img src="ransanmoi.png" alt="Game Rắn săn mồi">
-                <p>Rắn săn mồi</p>
-            </div>
-        </div>
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        <div class="nghe-nhac">
-            <div class="game-chinh" id="game7" onclick="redirectToGame7()">
-                <img src="Phatnhac.png" alt="Nghe nhạc">
-                <p>Trang web nghe nhạc</p>
-            </div>
-        </div>
+            // Display the countdown
+            document.getElementById("countdown").innerHTML = "Còn lại " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây ";
 
-        <div id="updateModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeUpdatePopup()">&times;</span>
-                <h2>Cập nhật 2.2</h2>
-                <hr>
-                <ul>
-                    <li>Sửa trò rắn săn mồi</li>
-                    <li>Thêm trang nghe nhạc made by Kiệt</li>
-                    <li>Thêm trang nhạc</li>
-                    <li>Thêm 3 nhạc trang nhạc</li>
-                </ul>
-                <hr>
-                <p>Cảm ơn đã trải nghiệm trang web.</p>
-            </div>
-        </div>
+            // If the countdown is over, display the update message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Trang web đang cập nhật, vui lòng quay lại sau.";
+            }
+        }, 1000);
+    </script>
 
-    </div>
-    <script src="web.js"></script>
 </body>
 </html>
