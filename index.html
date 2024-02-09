@@ -25,35 +25,28 @@
 <body>
 
     <h1>Trang web đang cập nhật và sửa chữa máy chủ</h1>
-    <h1>Máy chủ hiện tại đang bị lỗi</h1>
-    <p id="countdown">Còn lại 12 ngày</p>
+    <h1>trang chủ mới </h1>
+    <p id="countdown">Hãy qua Trang chủ mới kdzvtk.github.io</p>
+
+    <!-- Thêm thẻ anchor để chuyển hướng người dùng -->
+    <a href="https://kdzvtk-game.github.io" id="newHomePageLink">kdzvtk.github.io</a>
 
     <script>
-        // Set the date we're counting down to
         var countDownDate = new Date("February 3, 2024 09:30:00").getTime();
 
-        // Update the countdown every 1 second
         var x = setInterval(function() {
-
-            // Get the current date and time
             var now = new Date().getTime();
-
-            // Calculate the remaining time
             var distance = countDownDate - now;
-
-            // Calculate days, hours, minutes, and seconds
             var days = Math.floor(distance / (1000 * 60 * 60 * 24));
             var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the countdown
             document.getElementById("countdown").innerHTML = "Còn lại " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây ";
 
-            // If the countdown is over, display the update message
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("countdown").innerHTML = "Trang web đang cập nhật, vui lòng quay lại sau.";
+                document.getElementById("countdown").innerHTML = "Hãy qua trang chủ mới kdzvtk.github.io";
             }
         }, 1000);
     </script>
